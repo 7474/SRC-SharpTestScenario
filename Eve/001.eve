@@ -1,0 +1,36 @@
+@機動戦士ガンダム
+
+プロローグ:
+Exit
+
+スタート:
+ChangeMap Map/001.map
+
+Create 味方 ガンダム 0 アムロ＝レイ(0079) 1 12 12
+
+Create 敵 ザクⅡ 0 デニム(0079) 5 8 8
+Create 敵 ザクⅡ 0 ジーン(0079) 3 10 8
+Create 敵 ザクⅡ 0 スレンダー(0079) 3 9 9
+
+Talk アムロ＝レイ(0079)
+やってやるぜ！
+End
+
+Exit
+
+エピローグ:
+Exit
+
+全滅 味方:
+Talk アムロ＝レイ(0079)
+なんてこったい
+End
+GameOver
+Exit
+
+全滅 敵:
+Talk アムロ＝レイ(0079)
+やったぜ
+End
+Continue Eve/002.eve
+Exit
