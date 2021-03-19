@@ -1,4 +1,5 @@
 プロローグ:
 # インターミッションを挟んでコンティニューするだけ
-Continue Eve/001.eve
+# Continue Eve/001.eve
+Continue 001.eve
 Exit
