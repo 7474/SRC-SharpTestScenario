@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   validate:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest    
     steps:
     - uses: actions/checkout@v2
 
@@ -13,7 +13,6 @@ jobs:
       with:
         dotnet-version: 5.0.x
     
-    - name: Validate
-      uses: 7474/SRC-DataLinter@master
-      with:
-        files: './'
+    - run: echo "::add-matcher::.github/workflows/src-lint.json"
+
+    - run: docker run -it --rm -v ${PWD}:/target -w /target koudenpa/srcdatalinter:latest /target
