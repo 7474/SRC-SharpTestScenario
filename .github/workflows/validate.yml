@@ -1,0 +1,19 @@
+name: Validate
+
+on: [push]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.x
+    
+    - name: Validate
+      uses: 7474/SRC-DataLinter@master
+      with:
+        files: './'
