@@ -26,9 +26,25 @@ End
 
 Create 味方 Ｚガンダム 10 アムロ＝レイ 1 9 10
 
-Do
-    Confirm Ｚガンダムで地球に降下していいですか？
-Loop While (選択 = 0)
+Set i 0
+Do While 1
+    Do
+        Set i (i + 1)
+        If (i = 2) Then
+            Skip
+        EndIf
+        Confirm Ｚガンダムで地球に降下していいですか？$(i)
+    Loop While (選択 = 0 And i < 10)
+    If 選択 = 0 Then
+        Talk システム
+        ドラクエならこうはいかなかった。
+        End
+        Break
+    EndIf
+    If i = 1 Then
+        Break
+    EndIf
+Loop
 
 Talk アムロ＝レイ
 よし。ブライト達はルナ・ツーに向かってくれ
