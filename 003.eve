@@ -11,7 +11,7 @@
 Exit
 
 スタート:
-ChangeMap Map/002.map
+ChangeMap Map/003.map
 
 Create 味方 ホワイトベース 10 ブライト＝ノア 1 10 10
 
@@ -90,5 +90,28 @@ GameOver
 Exit
 
 全滅 敵:
+Continue 004.eve
+Exit
+
+進入 アムロ＝レイ 地球:
+Talk アムロ＝レイ
+よし、突入する
+Suspend
+
+If Unit(アムロ＝レイ) = ウェイブライダー Then
+    Talk アムロ＝レイ
+    これがゼータか……すごいな
+    End
+Else
+    Talk アムロ＝レイ
+    ん？　なんだ……暑いな
+    た、大佐！　助けてください。げ、減速できません！ブライト大佐！助けてください！
+    Talk ブライト＝ノア
+    ア、アムロ。ゼータには大気圏を突破する性能は無い。気の毒だが……
+    アムロ、無駄死にだ。
+    End
+    GameOver
+EndIf
+
 Continue 004.eve
 Exit
