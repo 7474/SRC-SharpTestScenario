@@ -1,6 +1,6 @@
 # SRC-SharpTestScenario
 
-[SRC#](https://github.com/7474/SRC)向けのシナリオです。
+[SRC#](https://github.com/7474/SRC)動作確認に使っているシナリオです。
 
 文字コードが`UTF-8`なので[SRC](http://www.src-srpg.jpn.org/)では再生できません。
 
