@@ -64,20 +64,32 @@ End
 
 Switch 選択
 Case 1
-    Talk アムロ＝レイ
-    任せておけ
-    End
+    Goto ラベル１
 Case 2
+    Goto ラベル２
+Case 3
+    Goto ラベル３
+EndSw
+Exit
+
+ラベル１:
     Talk アムロ＝レイ
     ウェイブライダーには大気圏途中能力があるってことだ
     End
-Case 3
+Exit
+
+ラベル２:
     Talk アムロ＝レイ
     そんなことはない
     End
-EndSw
-
 Exit
+
+ラベル３:
+    Talk アムロ＝レイ
+    任せておけ
+    End
+Exit
+
 
 エピローグ:
 Exit
