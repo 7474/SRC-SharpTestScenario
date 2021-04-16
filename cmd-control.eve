@@ -1,0 +1,97 @@
+# For ForEach
+
+@機動戦士ガンダム
+@機動戦士ガンダムＺＺ
+@機動戦士ガンダム逆襲のシャア
+
+プロローグ:
+Exit
+
+スタート:
+ChangeMap Map/001.map
+
+Create 味方 ガンダム 10 アムロ＝レイ 1 12 12
+Create 味方 ホワイトベース 10 ブライト＝ノア 1 10 10
+Create 味方 バウ(ＭＡ) 10 カイ＝シデン 1 9 9
+Create 味方 リ・ガズィ(ＢＷＳ) 10 ハヤト＝コバヤシ 1 9 10
+
+Local lvar = (1 + 2 + 3)
+Talk システム
+$(lvar)
+End
+Local lvar2 = 3 + 4 + 5
+Talk システム
+$(lvar2)
+End
+
+For i = 1 To 10 Step 2
+Create 敵 ザクⅡ 0 ジオン兵(ザコ) 1 i i
+Talk システム
+$(i)
+End
+Next
+
+For i = 3 To 5
+Talk システム
+$(i)
+End
+Next
+
+# XXX リスト指定するForEachヘルプに載ってない？
+ForEach v In (abc def 123)
+Talk システム
+$(v)
+End
+Next
+
+Set larray[1] la1
+Set larray[2] la2
+Set larray[3] la3
+ForEach v In larray
+Talk システム
+Main: larray[$(v)] = $(larray[v])
+End
+Next
+
+CallCnt = 0
+Call 変数サブ
+
+ForEach v In larray
+Talk システム
+Main: larray[$(v)] = $(larray[v])
+End
+Next
+
+# TODO Global
+
+ForEach v In ユニット一覧(名称)
+Talk システム
+$(v)
+End
+Next
+
+ForEach v In パイロット一覧(名称)
+Talk システム
+$(v)
+End
+Next
+
+Exit
+
+変数サブ:
+CallCnt = CallCnt + 1
+Local larray
+# TODO Eval
+Set larray[1] sub$(CallCnt)la1
+Set larray[2] sub$(CallCnt)la2
+Set larray[3] sub$(CallCnt)la3
+If CallCnt < 3 Then
+    Call 変数サブ
+EndIf
+CallCnt = CallCnt - 1
+ForEach v In larray
+Talk システム
+Sub$(CallCnt): larray[$(v)] = $(larray[v])
+End
+Next
+Return
