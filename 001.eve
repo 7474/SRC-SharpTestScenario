@@ -9,20 +9,84 @@ Exit
 スタート:
 ChangeMap Map/001.map
 
-Create 味方 ガンダム 10 アムロ＝レイ 1 12 12
+Create 味方 ガンダム 0 アムロ＝レイ 1 12 12
 
 Create 敵 ザクⅡ 0 デニム(0079) 5 8 8
 Create 敵 ザクⅡ 0 ジーン(0079) 3 10 8
 Create 敵 ザクⅡ 0 スレンダー(0079) 3 9 9
 Create 敵 チベ 0 コンスコン(0079) 1 10 10
 
+ChangeTerrain 7 8 廃墟 1
+ChangeTerrain 11 11 廃墟 1
+
 Talk アムロ＝レイ
 これは、ガンダム？　ザクもか。どういうことだ？
+End
+
+Monotone
+
+Talk アムロ＝レイ
+これは、白い
+End
+
+Monotone マップ限定
+
+Talk アムロ＝レイ
+戻ったのか？
+End
+
+Night
+
+Talk アムロ＝レイ
+夜だな
+End
+
+Sepia
+
+Talk アムロ＝レイ
+色あせているな
+End
+
+Sunset
+
+Talk アムロ＝レイ
+朝か
+End
+
+Water
+
+Talk アムロ＝レイ
+溺れたくはないな
+End
+
+ColorFilter #00ff00
+
+Talk アムロ＝レイ
+ジャブローだ
+End
+
+Noon
+
+Talk アムロ＝レイ
+もどったか？
+End
+
+
+ColorFilter #C08000 30%
+
+Talk アムロ＝レイ
+カレーか
 End
 
 Exit
 
 エピローグ:
+Exit
+
+勝利条件:
+Talk システム
+敵の全滅
+End
 Exit
 
 全滅 味方:
