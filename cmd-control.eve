@@ -24,6 +24,17 @@ Talk システム
 $(lvar2)
 End
 
+Array ARRAYCMD "1,12,123" ","
+For i = 1 To 3 Step 1
+Talk システム
+$(ARRAYCMD[i])
+End
+Next
+
+# TODO CopyArray
+# TODO Swap
+# TODO Global
+
 For i = 1 To 10 Step 2
 Create 敵 ザクⅡ 0 ジオン兵(ザコ) 1 i i
 Talk システム
