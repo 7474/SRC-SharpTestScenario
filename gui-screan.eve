@@ -1,0 +1,60 @@
+# Screan
+
+@ドラゴンクエスト５
+
+プロローグ:
+Exit
+
+スタート:
+ChangeMap Map/001.map
+
+Create 味方 グランバニア国王パパス 10 グランバニア国王パパス 1 10 10
+
+TestArc
+TestCircle
+
+Exit
+
+エピローグ:
+Exit
+
+マップコマンド 円弧:
+TestArc
+Exit
+
+マップコマンド 円:
+TestCircle
+Exit
+
+TestArc:
+# Arc x y r start end [color]
+Arc 50 50 50 0 45
+Arc 50 50 50 45 90 #ff0000
+DrawOption 保持
+DrawWidth 2
+Arc 50 50 50 90 135 #00ff00
+DrawOption 背景
+DrawWidth 3
+Arc 50 50 50 135 180 #0000ff
+Refresh
+DrawOption 通常
+Talk システム
+Arc
+End
+Return
+
+TestCircle:
+# Circle x y r [color]
+Circle 75 75 50
+DrawOption 保持
+DrawWidth 2
+Circle 75 75 60
+DrawOption 背景
+DrawWidth 3
+Circle 75 75 70
+Refresh
+DrawOption 通常
+Talk システム
+Circle
+End
+Return

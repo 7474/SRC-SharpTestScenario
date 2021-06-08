@@ -1,0 +1,54 @@
+# File
+
+@機動戦士ガンダム
+@機動戦士ガンダムＺＺ
+@機動戦士ガンダム逆襲のシャア
+
+プロローグ:
+Exit
+
+スタート:
+ChangeMap Map/001.map
+
+Create 味方 ガンダム 10 アムロ＝レイ 1 12 12
+Create 味方 ホワイトベース 10 ブライト＝ノア 1 10 10
+Create 味方 バウ(ＭＡ) 10 カイ＝シデン 1 9 9
+Create 味方 リ・ガズィ(ＢＷＳ) 10 ハヤト＝コバヤシ 1 9 10
+Exit
+
+マップコマンド File:
+Call ファイル読み書き
+Exit
+
+マップコマンド Dir:
+Call ディレクトリ走査
+Exit
+
+ファイル読み書き:
+Input ファイル名 ファイル名入力 テスト.txt
+
+Open ファイル名 For 追加出力 As ファイルハンドル
+Print ファイルハンドル ファイル名
+Close ファイルハンドル
+
+Open ファイル名 For 入力 As ファイルハンドル
+Set i 0
+Do While (Not EOF(ファイルハンドル))
+    Incr i
+    LineRead ファイルハンドル ライン
+    Talk システム
+    ライン$(i) $(ライン)
+    End
+Loop
+Close ファイルハンドル
+Return
+
+ディレクトリ走査:
+Set fname Dir("*.eve")
+Do While (fname <> "")
+    Talk システム
+    fname $(fname)
+    End
+    Set fname Dir()
+Loop
+Return

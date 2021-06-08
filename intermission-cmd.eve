@@ -1,0 +1,10 @@
+プロローグ:
+Talk システム
+これはインターミッションコマンドです。
+End
+
+IntermissionCommand `IM: $(資金)` 削除
+
+Continue
+
+

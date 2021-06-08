@@ -1,0 +1,26 @@
+# Message
+
+@ドラゴンクエスト５
+@ヴァルキリープロファイル
+
+プロローグ:
+Exit
+
+スタート:
+ChangeMap Map/001.map
+
+Create 味方 グランバニア国王パパス 10 グランバニア国王パパス 1 12 12
+Create 味方 富豪の娘フローラ 10 富豪の娘フローラ 1 12 12
+Create 味方 スライムナイト・ピエール 10 スライムナイト・ピエール 1 12 12
+Create 味方 魔法使い・マーリン 10 魔法使い・マーリン 1 12 12
+
+Create 敵 ロキ(ＶＰＦ) 0 ロキ(ＶＰＦ) 10 8 8
+Create 敵 魔王ゲマ 0 魔王ゲマ 10 8 8
+Create 敵 ゲマの側近ジャミ 0 ゲマの側近ジャミ 10 8 8
+Create 敵 ゲマの側近ゴンズ 0 ゲマの側近ゴンズ 10 8 8
+
+IntermissionCommand `IM: $(資金)` intermission-cmd.eve
+
+Continue 001.eve
+Exit
+

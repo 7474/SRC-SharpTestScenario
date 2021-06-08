@@ -140,6 +140,7 @@ CACB, DQ05_FloraU.bmp
 特殊能力
 性別=女性
 マホカンタ
+武器ＢＧＭ=ベギラマ CRNT_BossBattle2.mid
 3000, 180, 800, 65
 CACB, DQ05_FloraU.bmp
 ラリホー,                    0,  1,  4,   +0,   -,  10,   -, AAAA,  +15, 魔術眠

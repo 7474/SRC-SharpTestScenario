@@ -37,6 +37,11 @@ End
 
 Create 味方 Ｚガンダム 10 アムロ＝レイ 50 8 8
 
+# 2体合体もUnit作っとく必要あるんだっけ？
+Create 味方 ガンダムMkⅡ 10 ハサウェイ＝ノア 50 8 8
+Create 味方 Ｇディフェンサー 10 ケーラ＝スゥ 50 8 8
+Unit Ｇフライヤー 10
+
 Create 敵 サイコガンダム(ＭＡ) 0 ジェリド＝メサ 50 5 5
 For i = 1 To 10
     Create 敵 アッシマー(ＭＡ) 0 ティターンズ兵士(ザコ) 50 5 5
@@ -90,4 +95,11 @@ Exit
 Talk システム
 燃える友情～
 End
+Exit
+
+マップコマンド フェード・フェード・んんん～～～:
+FadeOut
+FadeIn
+WhiteOut
+WhiteIn
 Exit
