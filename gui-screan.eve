@@ -10,12 +10,17 @@ ChangeMap Map/001.map
 
 Create 味方 グランバニア国王パパス 10 グランバニア国王パパス 1 10 10
 
+TestPaintString
 TestArc
 TestCircle
 
 Exit
 
 エピローグ:
+Exit
+
+マップコマンド 文字列:
+TestPaintString
 Exit
 
 マップコマンド 円弧:
@@ -25,6 +30,28 @@ Exit
 マップコマンド 円:
 TestCircle
 Exit
+
+TestPaintString:
+# PaintString [x y] message
+#フォントサイズ・種類を変更
+Font 24pt Ｐゴシック Regular
+#フェードインしながら１秒間かけてメッセージを表示
+#ウェイトの同期処理を開始
+Wait Start
+For i = 1 To 20
+#色を変更
+Font RGB(4 * i, 8 * i, 12.5 * i)
+#メッセージを表示
+PaintString - 200 "A long time ago in a galaxy far,"
+PaintString "far away ...."
+#画面を更新
+Refresh
+#ウェイト処理
+Wait Until (0.5 * i)
+Next
+#デフォルトのフォントに戻しておく
+Font
+Return
 
 TestArc:
 # Arc x y r start end [color]
