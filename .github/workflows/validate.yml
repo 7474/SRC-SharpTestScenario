@@ -1,0 +1,18 @@
+name: Validate
+
+on: [push]
+
+jobs:
+  validate:
+    runs-on: windows-latest    
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.x
+    
+    - run: echo "::add-matcher::.github/workflows/src-lint.json"
+
+    - run: docker run -it --rm -v {{ GITHUB_WORKSPACE }}:/target -w /target koudenpa/srcdatalinter:latest /target
