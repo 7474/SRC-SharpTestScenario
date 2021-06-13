@@ -24,6 +24,10 @@ Exit
 Call ディレクトリ走査
 Exit
 
+マップコマンド FileMove:
+Call ファイル移動
+Exit
+
 ファイル読み書き:
 Input ファイル名 ファイル名入力 テスト.txt
 
@@ -51,4 +55,15 @@ Do While (fname <> "")
     End
     Set fname Dir()
 Loop
+Return
+
+ファイル移動:
+CreateFolder "Test"
+CopyFile "./cmd-file.eve" "Test/copy-of-cmd-file.eve"
+RenameFile "Test/copy-of-cmd-file.eve" "Test/cmd-file.eve"
+Talk システム
+この後消す
+End
+RemoveFile "Test/cmd-file.eve"
+RemoveFolder "Test"
 Return
