@@ -1,0 +1,16 @@
+
+
+プロローグ:
+Telop 敵か味方か！.謎の剣士参上！！
+Talk システム
+プロローグ
+End
+Exit
+
+スタート:
+Telop いちぎょう
+Talk システム
+スタート
+End
+GameClear
+Exit
