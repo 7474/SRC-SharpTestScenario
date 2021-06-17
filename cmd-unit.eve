@@ -1,0 +1,46 @@
+
+@ドラゴンクエスト５
+
+プロローグ:
+Exit
+
+スタート:
+ChangeMap Map/001.map
+
+Create 味方 ＤＱ５主人公(前期型) 1 ＤＱ５主人公(子供時代) 10 10 10
+Talk ＤＱ５主人公(子供時代)
+幼年
+End
+Exit
+
+マップコマンド 青年:
+Pilot ＤＱ５主人公 Level(ＤＱ５主人公(子供時代))
+GetOff ＤＱ５主人公(子供時代)
+Ride ＤＱ５主人公 ＤＱ５主人公(前期型)
+RemovePilot ＤＱ５主人公(子供時代)
+Talk ＤＱ５主人公
+青年
+End
+Exit
+
+マップコマンド 無印:
+Upgrade ＤＱ５主人公(前期型) ＤＱ５主人公
+Talk ＤＱ５主人公
+無印
+End
+Exit
+
+マップコマンド 王者装備:
+Upgrade ＤＱ５主人公 ＤＱ５主人公(王者装備)
+Talk ＤＱ５主人公
+王者装備
+End
+Exit
+
+エピローグ:
+Exit
+
+全滅 敵:
+GameClear
+Exit
+
