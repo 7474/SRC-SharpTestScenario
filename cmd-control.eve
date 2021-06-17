@@ -24,8 +24,11 @@ Talk システム
 $(lvar2)
 End
 
+Set i 1
+Debug デバッグメッセージ$(i)
 Array ARRAYCMD "1,12,123" ","
 For i = 1 To 3 Step 1
+Debug ARRAYCMD[$(i)]: $(ARRAYCMD[i])
 Talk システム
 $(ARRAYCMD[i])
 End
