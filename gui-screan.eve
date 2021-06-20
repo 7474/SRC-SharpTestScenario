@@ -10,9 +10,14 @@ ChangeMap Map/001.map
 
 Create 味方 グランバニア国王パパス 10 グランバニア国王パパス 1 10 10
 
+Cls
 TestPaintString
 TestArc
 TestCircle
+TestLine
+TestOval
+TestPSet
+TestPolygon
 
 Exit
 
@@ -29,6 +34,22 @@ Exit
 
 マップコマンド 円:
 TestCircle
+Exit
+
+マップコマンド 線:
+TestLine
+Exit
+
+マップコマンド 楕円:
+TestOval
+Exit
+
+マップコマンド 点:
+TestPSet
+Exit
+
+マップコマンド 多角形:
+TestPolygon
 Exit
 
 TestPaintString:
@@ -83,5 +104,94 @@ Refresh
 DrawOption 通常
 Talk システム
 Circle
+End
+Return
+
+TestLine:
+# Line x1 y1 x2 y2 [options]
+Line 50 100 50 200 #ff0000
+DrawOption 保持
+DrawWidth 2
+Line 50 100 60 200 #00ff00
+DrawOption 背景
+DrawWidth 3
+Line 50 100 70 200 #0000ff
+Refresh
+DrawOption 通常
+Talk システム
+Line
+End
+Line 50 100 50 200 B
+DrawOption 保持
+DrawWidth 2
+Line 50 100 60 200 B
+DrawOption 背景
+DrawWidth 3
+Line 50 100 70 200 B
+Refresh
+DrawOption 通常
+Talk システム
+Line B
+End
+Line 50 100 50 200 BF
+DrawOption 保持
+DrawWidth 2
+Line 50 100 60 200 BF
+DrawOption 背景
+DrawWidth 3
+Line 50 100 70 200 BF
+Refresh
+DrawOption 通常
+Talk システム
+Line BF
+End
+Return
+
+TestOval:
+# Oval x y r ratio [color]
+Oval 100 100 50 0.5
+DrawOption 保持
+DrawWidth 2
+Oval 100 100 50 0.25
+DrawOption 背景
+DrawWidth 3
+Oval 100 100 50 0.75
+Refresh
+DrawOption 通常
+Talk システム
+Oval
+End
+
+DrawWidth 1
+For i = 1 To 20
+Oval 100 100 50 (i / 10)
+Refresh
+Wait 0.1
+Next
+Return
+
+TestPSet:
+# PSet ｘ y [color]
+#描画色を(255,255,255)に変更
+Color RGB(255,255,255)
+#ランダムに点を100個描画
+For i = 1 To 100
+PSet Random(100) Random(100)
+Next
+#画面を更新
+Refresh
+Talk システム
+PSet
+End
+Return
+
+TestPolygon:
+# Polygon x1 y1 x2 y2 x3 y3 ……
+#(0,100),(20,20),(100,50)を頂点とする三角形を描画
+Polygon 0 100  20 20  100 50
+#画面を更新
+Refresh
+Talk システム
+Polygon
 End
 Return
