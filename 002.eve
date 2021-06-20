@@ -18,6 +18,9 @@ ChangeMap Map/002.map
 Create 味方 ガンダム 10 アムロ＝レイ 1 12 12
 Create 味方 ホワイトベース 0 ブライト＝ノア 1 10 10
 
+Equip アムロ＝レイ プロペラントタンク
+Equip ブライト＝ノア リペアキット
+
 Talk アムロ＝レイ
 あれは、ホワイトベース？
 Talk ブライト＝ノア
@@ -38,6 +41,14 @@ End
 Unit 量産型νガンダム(フィンファンネル装備型) 1
 Unit ガンキャノン 1
 Unit νガンダム 0
+
+
+Item ブースター
+Item メガブースター
+Item ブースター
+Item メガブースター
+Item ブースター
+Item メガブースター
 
 # Continue 003.eve
 Exit
