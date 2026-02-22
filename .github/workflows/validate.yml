@@ -4,14 +4,9 @@ on: [push]
 
 jobs:
   validate:
-    runs-on: windows-latest    
+    runs-on: ubuntu-latest    
     steps:
-    - uses: actions/checkout@v2
-
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: 5.0.x
+    - uses: actions/checkout@v6
     
     - run: echo "::add-matcher::.github/workflows/src-lint.json"
 
