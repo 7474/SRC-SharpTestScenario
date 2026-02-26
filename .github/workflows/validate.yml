@@ -1,0 +1,13 @@
+name: Validate
+
+on: [push]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest    
+    steps:
+    - uses: actions/checkout@v6
+    
+    - run: echo "::add-matcher::.github/workflows/src-lint.json"
+
+    - run: docker run -i --rm -v ${{ github.workspace }}:/target -w /target koudenpa/srcdatalinter:latest /target
